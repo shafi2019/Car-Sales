@@ -1,7 +1,6 @@
 export const ADD_FEATURE = "ADD_FEATURE";
-export const ADD_FEATURE_PRICE = "ADD_FEATURE_PRICE";
 export const REMOVE_FEATURE = "REMOVE_FEATURE";
-export const REMOVE_FEATURE_PRICE = "REMOVE_FEATURE_PRICE";
+export const UPDATE_TOTAL = "UPDATE_TOTAL";
 
 export const addFeature = feature => {
   return{
@@ -10,23 +9,17 @@ export const addFeature = feature => {
   }
 }
 
-export const addFeaturePrice = feature => {
+
+export const removeFeature = feature => {
   return{
-    type: ADD_FEATURE_PRICE,
+    type: REMOVE_FEATURE,
     payload: feature
   }
 }
 
-export const removeFeature = featurePrice => {
-  return{
-    type: REMOVE_FEATURE,
-    payload: featurePrice
-  }
-}
-
-export const removeFeaturePrice = featurePrice => {
+export const updateTotal = total => {
   return {
-    type: REMOVE_FEATURE_PRICE,
-    payload: featurePrice
+    type: UPDATE_TOTAL,
+    payload: total
   };
 };
